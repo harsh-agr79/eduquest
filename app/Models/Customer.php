@@ -27,6 +27,10 @@ class Customer extends Authenticatable
          'xp',
     ];
 
+    protected $casts = [
+    'xp' => 'integer',
+];
+
     /**
      * The attributes that should be hidden for serialization.
      *
