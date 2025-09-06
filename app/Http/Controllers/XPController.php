@@ -32,12 +32,13 @@ class XPController extends Controller
             ]);
 
             // Increase customer's total XP
-            $user->xp += $request->xp_gained/10;
-            $user->save();
+            $customer = Customer::find($user->id);
+            $customer->xp += $request->xp_gained/10;
+            $customer->save();
 
             return response()->json([
                 'message' => 'XP recorded successfully',
-                'total_xp' => $user->xp,
+                'total_xp' => $customer->xp,
             ], 201);
         }
 
