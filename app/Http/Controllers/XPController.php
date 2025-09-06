@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\XP;
+use App\Models\FPSWin;
+use App\Models\Customer;
 
 class XPController extends Controller
 {
